@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Overlay for narrative text */
+#overlay {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 10;
+}
+
+/* Visible state for the overlay */
+#overlay.visible {
+    opacity: 1;
+}
+
+/* Style for headings and paragraphs */
+#overlay h1, #overlay h2 {
+    margin: 10px 0;
+}
+
+#overlay p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Canvas Styling */
+#three-canvas {
+    display: block; /* Removes scrollbar caused by inline-block */
+    width: 100vw;
+    height: 100vh;
+}
